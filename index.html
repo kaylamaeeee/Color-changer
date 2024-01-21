@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Color changer </title>
+</head>
+
+<style>
+    h1 {
+        text-align: center;
+        color: black;
+        margin-left: -28px;
+        padding: 50px;
+        font-size: 40px;
+        border: 1px solid black;
+    }
+    
+    #color {
+        background-color: #006300;
+        height: 250px;
+        width: 400px;
+        top: 35%;
+        border-radius: 5px;
+        position: absolute;
+        margin-left: 450px;
+
+    }
+
+    #button {
+        position: absolute;
+        top: 80%;
+        background-color: #0a0a23;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        padding: 20px;
+        min-width: 160px;
+        margin-left: 570px;
+    }
+
+    #button:hover {
+        background: linear-gradient(to right, green, blue);  
+        transition: 0.10s;
+    }
+
+    body {
+        background: linear-gradient(to right, purple, #A020F0, #e589ff);
+
+    }
+
+</style>
+<body>
+    <h1> Javascript colorChanger() Hands-On </h1>
+    
+    <div id="color"> </div>
+
+    <button id="button"> Click Me </button>
+
+    <script>
+        let colorBox = document.getElementById("color");
+        let button = document.getElementById("button");
+
+        button.addEventListener("click", changecolor)
+
+        function changecolor() {
+            if (colorBox.style.backgroundColor === "green" ) {
+                colorBox.style.backgroundColor = 'blue'
+            } else {
+                colorBox.style.backgroundColor = "green";
+            }
+        }
+    </script>
+</body>
+</html>
